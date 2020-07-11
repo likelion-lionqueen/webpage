@@ -1,0 +1,59 @@
+{%load static%}
+<!--우리는 static 파일을 사용할 거에요-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>아이디어 모음</title>
+  </head>
+
+  <body>
+
+    <main role="main">
+
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+            <!-- 여기 static 수정해서 쓰면 됩니다.-->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="{%static 'callmebyyourname.jpg' %}" height="400" alt="콜바넴 포스터">
+                <div class="card-body">
+                  <p class="card-text"> Elio의 처음이자 Oliver의 전부가 된 그 해, 여름보다 뜨거웠던 사랑이 펼쳐진다</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 여기는 동적 이미지 불러오는 반복문 입니다.-->
+            {%for movie in movies.all%}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <img src="{{idea.image.url}}" height="400" alt="아이디어 포스터">
+                  <!--반복문의 movie / image 모델에서 받는 이미지-->
+                  <div class="card-body">
+                    <p class="card-text">{{idea.description}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {%endfor%}
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </body>
+</html>

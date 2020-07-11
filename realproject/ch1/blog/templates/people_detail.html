@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LIONQUEEN</title>
+    <link rel="stylesheet" href="{% static 'people_detail.css' %}">
+</head>
+<body>
+        <div class="container">
+                <header>
+                    <nav>
+                        <ul class="show-desktop " id="nav">
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{%url 'idea' %}">Projects</a></li>
+                            <li><a href="#">Contacts</a></li>
+                             <!-- 이거 글쓰기 할 수 있는 버튼인데 project 세부 페이지로 옮겨주세요.-->
+                            <button type="button" class="btn btn-warning" href="{% url 'blog:new' %}">아이디어 추가하기</button>
+                        </ul>
+                    </nav>
+                </header>
+
+                <ul class="cell">
+                    <li class="cell-3"> 
+                        <a href="{% url 'home' %}">
+                            <p>팀장 김세은</p>                
+                            <img src="{% static 'image/monkey.png' %}" alt="people icon" height=300px width=214px> <!--팀원 각각 이미지 넣는 곳.-->
+                        </a> 
+                        <blockquote>컴퓨터공학과 18학번<br> "작심삼일 무한반복! 끝까지 코딩하자"</blockquote>
+                    </li>
+                    <li class="cell-4"> 
+                        <a href="{% url 'home' %}">
+                            <p>팀원 김규원</p>                
+                            <img src="{% static 'image/nala.png' %}" alt="people icon" height=300px width= 228px>                    
+                        </a>
+                    <blockquote>컴퓨터공학과 18학번<br> "언제나 공부하는 따듯한 마음을 가진 프로그래머가 되겠습니다~!"</blockquote>
+                    </li> 
+                    <li class="cell-5"> 
+                        <a href="{% url 'home' %}">
+                            <p>팀원 최예은</p>                
+                            <img src="{% static 'image/timon.png' %}" alt="people icon" height=300px width=238px>                    
+                        </a> 
+                    <blockquote>컴퓨터공학과 19학번<br> "열심히 공부해서 도움이 되도록 노력하겠습니다 ;)"</blockquote>
+                    </li> 
+                    <li class="cell-6"> 
+                        <a href="{% url 'home' %}">
+                            <p>팀원 류성경</p>                
+                            <img src="{% static 'image/simba.png' %}" alt="people icon" height=300px width=249px>                    
+                        </a>
+                    <blockquote>호크마교양대학 20학번<br> "코딩노베지만 존버정신으로 <br>코딩마스터가 되겠습니다:)"</blockquote>
+                 </ul>    
+        </div>
+        
+        <footer>
+                <div class="footer-container">
+                    <img src="{% static 'image/basiclogo_E_H_W.png' %}" alt="logo" class="logo">
+                    <p class="address">이화여자대학교 멋쟁이사자처럼 LIONQUEEN</p>
+                </div>
+        </footer>
+</body>
+
+</html>
