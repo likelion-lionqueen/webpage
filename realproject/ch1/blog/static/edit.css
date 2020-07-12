@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+body{
+    margin:0;
+    font-family: 'Noto Sans KR', sans-serif;  
+    background-color: #FFCB4F;  
+}
+
+form { 
+    margin: 0 auto; 
+    width:250px;
+    text-align: center;
+    font-size: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    zoom:1.5;
+}
+
+textarea{
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    font-family: 'Noto Sans KR', sans-serif;  
+} 
+
+h4{
+    border: 1px solid black;
+}
+
+input{
+    background: transparent;
+    position: relative;
+    margin: 10px 10px 10px 10px;
+    font-family: 'Noto Sans KR', sans-serif;  
+}

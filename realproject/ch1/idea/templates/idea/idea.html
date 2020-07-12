@@ -3,12 +3,28 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>아이디어 모음</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'idea.css' %}">
+    <title>IDEAS</title>
   </head>
-
+  
   <body>
+    <div class="container">
+      <header>
+        <nav>
+          <ul class="show-desktop " id="nav">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{%url 'idea' %}">Ideas</a></li>
+            <li><a href="#">Contacts</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
 
     <main role="main">
+      <h1>진행중인 프로젝트 </h1>
 
 
       <div class="album py-5 bg-light">
@@ -17,26 +33,34 @@
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                <img src="{%static 'callmebyyourname.jpg' %}" height="400" alt="콜바넴 포스터">
+                <img src="{%static 'image/poster.png' %}" height="400" alt="칼럼 포스터">
                 <div class="card-body">
-                  <p class="card-text"> Elio의 처음이자 Oliver의 전부가 된 그 해, 여름보다 뜨거웠던 사랑이 펼쳐진다</p>
-                  <div class="d-flex justify-content-between align-items-center">
+                  <p class="card-text"> <span style="font-weight:bold">우리들의 대학 친구, 똑똑한 공지 알리미 칼럼</p>
+                  <p >홀로 알아서 챙겨야하는 대학생들, 그들을 위해 학교 공지사항 알림 서비스 칼럼이 찾아갑니다.<br>
+                    개인 맞춤형 서비스와 함께 더이상 놓치는 공지 없이 훌륭한 대학생활을 누릴 수 있습니다!</p>
+                  <div class="text_cell"style="font-weight:bold">
+                    <p>-키워드 설정으로 사용자가 확인하고 싶은 공지사항 우선 확인 가능 <br>
+                    -알림 설정을 통해 키워드 푸시 배너 혹은 메일 알림 가능<br>
+                    -공지사항 북마크 기능과 현재 몇 명이 북마크 하였는지 확인 가능<br>
+                    -신청 기간을 반영한 효율적인 정보 확인 가능</p>
+                  </div>
+                  <!-- <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                     </div>
                     <small class="text-muted">9 mins</small>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
 
             <!-- 여기는 동적 이미지 불러오는 반복문 입니다.-->
-            {%for movie in movies.all%}
+            <!-- {%for movie in movies.all%}
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                   <img src="{{idea.image.url}}" height="400" alt="아이디어 포스터">
-                  <!--반복문의 movie / image 모델에서 받는 이미지-->
+                  반복문의 movie / image 모델에서 받는 이미지
                   <div class="card-body">
                     <p class="card-text">{{idea.description}}</p>
                     <div class="d-flex justify-content-between align-items-center">
@@ -49,7 +73,7 @@
                   </div>
                 </div>
               </div>
-              {%endfor%}
+              {%endfor%} -->
           </div>
         </div>
       </div>

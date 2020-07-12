@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+
+body{
+    margin:0;
+    font-family: 'Noto Sans KR', sans-serif;  
+    background-color: #e5f4f5;  
+    text-align: center;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+  
+}
+
+.container{
+    width: 80%;
+    margin: 50px auto;
+    text-align: center
+}
+
+.show-desktop{
+    display: block;
+    margin: 0 auto 13% auto;
+}
+
+
+.card-text{
+    font-size: 25px;
+}
+
+
+
+nav ul {
+    position: fixed;
+    width: 60%;
+    top:0;
+    right:0;
+    text-align: left;
+    background:rgb(36,41,44);
+    z-index: 7;
+    height: 100%;
+    padding-top: 3em;
+    font-size: 1em;
+}
+
+
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    
+}
+
+li{
+    list-style-type: none;
+    /*height: 150px;*/
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+}
+
+
+
+
+@media only screen and (min-width:650px){
+    nav ul {
+        position : inherit;
+        width: auto;
+        background: none;
+        height: auto;
+        display: flex;
+        padding-top: 0;
+        font-family: 'Black Han Sans', sans-serif;
+
+    }
+
+ /*성경: 글씨 색깔/마우스오버시 색깔 바뀌게 설정*/
+    nav ul li{
+        float: left;
+    }
+    nav ul li a{
+        color: black;
+        background-color: inhereit;    
+    }   
+
+    nav ul li a:hover{
+        color: white;
+    }
+}
+
+/* 전체 복붙 */

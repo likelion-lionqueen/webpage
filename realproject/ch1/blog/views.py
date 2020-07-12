@@ -48,7 +48,7 @@ def create(request):
 
 def delete(request, blog_id):
     blogs = Blog.objects.get(pk= blog_id)
-    blog.delete()
+    blogs.delete()
     return redirect('home')
 
 def edit(request,blog_id):

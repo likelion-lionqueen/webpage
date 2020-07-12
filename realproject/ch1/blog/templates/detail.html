@@ -1,9 +1,18 @@
 
-<h1> project detail page 입니다.</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'detail.css' %}">
+</head>
+
+<!-- <h1> project detail page 입니다.</h1> -->
 
 <div class="container">
     <h1>{{ blog.title }}</h1>
-    <p>{{ blog.pub_date }}</p>
+    <p class ="date">{{ blog.pub_date }}</p>
     <p>{{ blog.body }}</p>
 
     <div class="hashtag">
@@ -11,8 +20,9 @@
         #{{hashtag.name}}
         {% endfor %}
     </div>
-    
-    <a href="{% url 'home' %}">돌아가기</a>
+    <br>
+    <br>
+    <a href="{% url 'home' %}" >돌아가기</a>
 </div>
 
 
